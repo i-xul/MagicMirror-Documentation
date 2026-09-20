@@ -99,7 +99,6 @@ debugging:
   when a server restart is detected.
 - `httpHeaders` (default: built-in helmet config object) allows overriding
   server security header behavior.
-- `hideConfigSecrets` is documented in detail in [Secrets](./secrets).
 
 When you use functions in `config.js`, keep them inside the exported `config`
 object if they need to be available in the browser. MagicMirror² serves the
@@ -116,6 +115,9 @@ are:
 | MM_CONFIG_FILE            | This specifies an alternate configuration file for the system. This is useful when running multiple mirrors on the same device. NOTE: this file **_MUST_** be located in a directory within the MagicMirror directory. Ideally, place any config file in the config subdirectory. |
 | MM_PORT                   | This specifies an alternate TCP/IP port, overriding "port" item within the config file. This is useful for testing to see if the product will run using another port.                                                                                                             |
 | mmFetchTimeout            | time in milliseconds for fetch timeout. default (30000) <br><br>this value can be used to adjust the nodejs fetch function timeout value for all node_helper modules that use fetch()                                                                                             |
+
+See [Secrets](./secrets) for information about using `SECRET_` environment
+variables.
 
 #### Examples of use
 
